@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.login-banner {
+  flex: 1;
+  background: linear-gradient(135deg, #1890ff 0%, #001529 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 40px;
+  position: relative;
+}
+
+.login-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://source.unsplash.com/random/1920x1080/?ecommerce,shopping') center/cover no-repeat;
+  opacity: 0.2;
+}
+
+.login-banner-content {
+  z-index: 1;
+  text-align: center;
+}
+
+.login-form-wrapper {
+  flex: 0 0 500px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .login-banner {
+    display: none;
+  }
+  .login-form-wrapper {
+    flex: 1;
+    padding: 20px;
+  }
+}
